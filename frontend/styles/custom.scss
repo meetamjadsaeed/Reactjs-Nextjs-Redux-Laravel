@@ -1,0 +1,82 @@
+$primary: #2289FF;
+$secondary: #186AA5;
+$tertiary:#14395B;
+$white: #FFFFFF;
+$mix: #F4F7FA;
+$text1:#8D9598;
+$text2:#0FA8E2;
+$text3:#303030;
+$border:#707070;
+
+html,
+body {
+  padding: 0 !important;
+  margin: 0 !important;
+  font-family: 'Playfair Display', serif !important;
+    background-color:$white !important;
+}
+
+.logo{
+    width: 52px;
+    height: 24px;
+}
+
+.navSearch{
+border: dotted;
+border-color:$border ;
+}
+
+.btn{
+    background-color: $primary !important;
+    color: $white !important;
+}
+
+h1{
+    color: $primary !important;
+    font-size: 88px !important;
+    font-weight: bold !important;
+    font-family: 'Playfair Display', serif !important;
+    text-decoration: none !important;
+}
+
+h2{
+    color: $tertiary !important;
+    font-size: 48px !important;
+    font-weight: bold !important;
+    font-family: 'Playfair Display', serif !important;
+    text-decoration: none !important;
+}
+
+h3{
+    color: $secondary !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+    font-family: 'Playfair Display', serif !important;
+    text-decoration: none !important;
+}
+
+p{
+    color: $text3 !important;
+    font-size: 20px !important;
+    font-family: 'Playfair Display', serif !important;
+}
+
+span{
+    color: $secondary !important;
+}
+
+.mainHead{
+    border-radius: 10px 10px 10px 10px;
+-webkit-border-radius: 10px 10px 10px 10px;
+-moz-border-radius: 10px 10px 10px 10px;
+background: #f9f3f3;
+border: 1px inset #ffffff;
+box-shadow: 10px 10px 5px -5px rgba(214,214,214,0.75);
+-webkit-box-shadow: 10px 10px 5px -5px rgba(214,214,214,0.75);
+-moz-box-shadow: 10px 10px 5px -5px rgba(214,214,214,0.75);
+
+}
+
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
