@@ -49,6 +49,7 @@ export default function About() {
       <ListGroup.Item>Nextjs</ListGroup.Item>
       <ListGroup.Item>Redux Toolkit</ListGroup.Item>
       <ListGroup.Item>React-Bootstrap</ListGroup.Item>
+      <ListGroup.Item>GeoPlugin API for Location</ListGroup.Item>
     </ListGroup>
 
 
