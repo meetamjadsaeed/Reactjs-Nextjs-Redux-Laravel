@@ -30,14 +30,9 @@ export default function Checkout() {
 
       {/* <div>Packages</div> */}
 
-      
-      
-    <div>
+      <div>
         <p>Checkout</p>
-    </div>
-
-
-
+      </div>
 
       {/* Footer */}
       <Footer />

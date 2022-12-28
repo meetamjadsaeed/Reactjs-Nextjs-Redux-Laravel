@@ -9,7 +9,7 @@ class Product extends Model
 {
     use HasFactory;
 
-     /**
+    /**
      * Get the reviews of the product.
      */
     public function reviews()

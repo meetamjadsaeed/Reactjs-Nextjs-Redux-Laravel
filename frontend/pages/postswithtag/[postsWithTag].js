@@ -140,7 +140,7 @@ export async function getServerSideProps(context) {
   // const slug  = router.query.post;
   const slug  = context.query.postsWithTag;
 
-  const res = await fetch(` http://127.0.0.1:8000/api/tags/${slug}/posts`, {
+  const res = await fetch(` ${process.env.NEXT_PUBLIC_BACKEND_API}tags/${slug}/posts`, {
     headers: {
       "Content-Type": "application/json",
       Authorization:

@@ -10,10 +10,10 @@ import "../styles/custom.scss";
 
 function MyApp({ Component, pageProps }) {
   return (
-  <Provider store={store}>
-    <Component {...pageProps} />
-  </Provider>
-  )
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
+  );
 }
 
 export default MyApp;

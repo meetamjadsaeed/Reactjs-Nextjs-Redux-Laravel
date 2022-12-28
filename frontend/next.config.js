@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   // distDir: "build",
-}
+};
 
 // module.exports = () => {
 //   const rewrites = () => {
@@ -19,4 +19,4 @@ const nextConfig = {
 //   };
 // };
 
-module.exports = nextConfig
+module.exports = nextConfig;

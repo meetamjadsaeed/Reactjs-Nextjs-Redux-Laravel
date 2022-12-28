@@ -24,7 +24,7 @@ export default function Authors() {
   const getData = async () => {
     // Get Posts
     await axios
-      .get("   http://127.0.0.1:8000/api/authors/  ", {
+      .get(`${process.env.NEXT_PUBLIC_BACKEND_API}authors`, {
         headers: {
           "Content-Type": "application/json",
           Authorization:
@@ -32,7 +32,7 @@ export default function Authors() {
         },
       })
       .then((result) => setAuthors(result.data.User));
-      // .then((result) => console.log(result));
+    // .then((result) => console.log(result));
   };
 
   useEffect(() => {
@@ -48,52 +48,29 @@ export default function Authors() {
 
       {/* <div>Packages</div> */}
 
-      
-     
-  <div class="container">
-   
-      <Row>
-     
-    { Authors ? 
-  Authors.map((item)=>{
-  // console.log(item);
-    return (
-
-
-
-        <Col lg={3}>
-
-<Link href={`http://localhost:3000/authors/${item.author_id}`}>
-                  <Button variant="primary" className="pricing-button"> {item.first_name} </Button> 
+      <div class="container">
+        <Row>
+          {Authors ? (
+            Authors.map((item) => {
+              // console.log(item);
+              return (
+                <Col lg={3}>
+                  <Link
+                    href={`http://localhost:3000/authors/${item.author_id}`}
+                  >
+                    <Button variant="primary" className="pricing-button">
+                      {" "}
+                      {item.first_name}{" "}
+                    </Button>
                   </Link>
-
-    
-          
-      
-        </Col>
-        
-
-
-)
-}) : <p>loading...</p>
-}
-
-
-     
-</Row>
-      
-
-     
-      
-    
-      
-    </div>
-
-
-
-
-
-
+                </Col>
+              );
+            })
+          ) : (
+            <p>loading...</p>
+          )}
+        </Row>
+      </div>
 
       {/* Footer */}
       <Footer />

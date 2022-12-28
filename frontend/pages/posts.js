@@ -14,36 +14,28 @@ import Head from "next/head";
 import MainNav from "../components/MainNav";
 import Form from "react-bootstrap/Form";
 import Link from "next/link";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 import Listings from "../components/Listings";
 import Search from "../components/Search";
 // const router = useRouter();
 // import { Linkk } from "react-router-dom";
 
-
 export default function Posts() {
-
   return (
     <>
-     
-
       {/* Header */}
       <Header />
 
       <Search />
 
       <div>
-                        <section>
-              
-
-                <h2 style={{'textAlign':'center', 'marginTop':'50px'}}>All Listings</h2>
-                <Listings />
-
-            </section>
-        </div>
-
-      
-
+        <section>
+          <h2 style={{ textAlign: "center", marginTop: "50px" }}>
+            All Listings
+          </h2>
+          <Listings />
+        </section>
+      </div>
 
       {/* </div> */}
 
@@ -52,5 +44,3 @@ export default function Posts() {
     </>
   );
 }
-
-

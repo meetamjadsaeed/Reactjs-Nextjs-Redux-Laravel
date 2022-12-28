@@ -15,7 +15,8 @@ class Category extends Model
         'meta_data',
     ];
 
-    public function posts(){
+    public function posts()
+    {
         return $this->hasMany(Post::class);
     }
 }

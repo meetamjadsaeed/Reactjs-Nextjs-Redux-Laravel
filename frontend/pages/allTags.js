@@ -20,38 +20,22 @@ import Tags from "../components/Tags";
 // import { Linkk } from "react-router-dom";
 
 export default function allTags() {
-
   return (
     <>
- 
-      
       {/* Header */}
- <Header />
+      <Header />
 
-      
-
-<div>
-                  <section>
-        
-
-          <h2 style={{'textAlign':'center', 'marginTop':'50px'}}>All Tags</h2>
+      <div>
+        <section>
+          <h2 style={{ textAlign: "center", marginTop: "50px" }}>All Tags</h2>
           <Tags />
+        </section>
+      </div>
 
-      </section>
-  </div>
+      {/* </div> */}
 
-
-
-
-{/* </div> */}
-
-{/* Footer */}
-<Footer />
-      
-    
-      
-  
-
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

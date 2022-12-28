@@ -5,16 +5,14 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import Card from 'react-bootstrap/Card';
-import Link from "next/link"; 
+import Card from "react-bootstrap/Card";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <>
       <MainNav />
 
-
-      
       <div
         className="d-sm-flex align-items-center justify-content-between w-100"
         style={{ height: "100vh" }}
@@ -22,16 +20,15 @@ export default function Header() {
         <div className="col-md-4 mx-auto mb-4 mb-sm-0 headline">
           <span className="text-secondary text-uppercase">Find AnyThing</span>
           <h1 className="display-4 my-4 font-weight-bold">
-          Empire <span style={{ color: "#9B5DE5" }}>Listings</span>
+            Empire <span style={{ color: "#9B5DE5" }}>Listings</span>
           </h1>
-          <Link href="/about">    
-        
-          <a
-            className="btn px-5 py-3 text-white mt-3 mt-sm-0"
-            style={{ "border-radius": "30px", "background-color": "#9B5DE5" }}
-          >
-            About
-          </a>
+          <Link href="/about">
+            <a
+              className="btn px-5 py-3 text-white mt-3 mt-sm-0"
+              style={{ "border-radius": "30px", "background-color": "#9B5DE5" }}
+            >
+              About
+            </a>
           </Link>
         </div>
 
@@ -46,8 +43,6 @@ export default function Header() {
           }}
         ></div>
       </div>
-
- 
 
       {/* <Container fluid>
         <Row>

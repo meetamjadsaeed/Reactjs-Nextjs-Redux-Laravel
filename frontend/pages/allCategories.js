@@ -20,34 +20,24 @@ import Categories from "../components/Categories";
 // import { Linkk } from "react-router-dom";
 
 export default function allCategories() {
- 
-
   return (
     <>
-    
- {/* Header */}
- <Header />
+      {/* Header */}
+      <Header />
 
-      
-
-<div>
-                  <section>
-        
-
-          <h2 style={{'textAlign':'center', 'marginTop':'50px'}}>All Categories</h2>
+      <div>
+        <section>
+          <h2 style={{ textAlign: "center", marginTop: "50px" }}>
+            All Categories
+          </h2>
           <Categories />
+        </section>
+      </div>
 
-      </section>
-  </div>
+      {/* </div> */}
 
-
-
-
-{/* </div> */}
-
-{/* Footer */}
-<Footer />
-
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

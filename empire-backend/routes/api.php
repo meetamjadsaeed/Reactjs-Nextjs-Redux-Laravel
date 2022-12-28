@@ -58,5 +58,5 @@ Route::delete('/products/{id}/reviews/{id}', [ProductController::class, 'destroy
 Route::middleware('auth:sanctum')->group(function () {
     Route::post('comments/posts', [CommentApiController::class, 'store']);
     Route::post('logout', [UserApiController::class, 'logout']);
-    Route::post('update-password',[UserApiController::class, 'updatePassword']);
+    Route::post('update-password', [UserApiController::class, 'updatePassword']);
 });

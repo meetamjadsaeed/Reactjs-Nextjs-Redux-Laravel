@@ -25,7 +25,7 @@ export default function author(props) {
   const getData = async () => {
     // Get Posts
     await axios
-      .get(` http://127.0.0.1:8000/api/authors/${author.author_id}/posts` , {
+      .get(` ${process.env.NEXT_PUBLIC_BACKEND_API}authors/${author.author_id}/posts` , {
         headers: {
           "Content-Type": "application/json",
           Authorization:
@@ -225,7 +225,7 @@ export async function getServerSideProps(context) {
   // const slug  = router.query.post;
   const slug  = context.query.author;
 
-  const res = await fetch(` http://127.0.0.1:8000/api/authors/${slug}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}authors/${slug}`, {
     headers: {
       "Content-Type": "application/json",
       Authorization:

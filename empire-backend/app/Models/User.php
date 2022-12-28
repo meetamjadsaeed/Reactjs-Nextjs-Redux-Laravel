@@ -36,28 +36,30 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    public function comments(){
+    public function comments()
+    {
         return $this->hasMany(Comment::class, 'author_id', 'id');
     }
 
-    public function posts(){
+    public function posts()
+    {
         return $this->hasMany(Post::class, 'author_id', 'id');
     }
 
     /**
-    * Get the products the user has added.
-    */
+     * Get the products the user has added.
+     */
     public function products()
     {
         return $this->hasMany('App\Models\Product');
     }
 
     /**
-    * Get the reviews the user has made.
-    */
+     * Get the reviews the user has made.
+     */
     public function reviews()
     {
-   return $this->hasMany('App\Models\Review');
+        return $this->hasMany('App\Models\Review');
     }
 
 

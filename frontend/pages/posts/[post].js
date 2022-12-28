@@ -20,7 +20,7 @@ export default function Post(props) {
   const getData = async () => {
     // Get Posts
     await axios
-      .get(`http://127.0.0.1:8000/api/posts/${post.post_id}/comments` , {
+      .get(`${process.env.NEXT_PUBLIC_BACKEND_API}posts/${post.post_id}/comments` , {
         headers: {
           "Content-Type": "application/json",
           Authorization:
@@ -201,7 +201,7 @@ export async function getServerSideProps(context) {
   // const slug  = router.query.post;
   const slug  = context.query.post;
 
-  const res = await fetch(`http://127.0.0.1:8000/api/posts/${slug}`, {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}posts/${slug}`, {
     headers: {
       "Content-Type": "application/json",
       Authorization:

@@ -19,28 +19,33 @@ class Post extends Model
         'author_id',
     ];
 
-    public function author(){
+    public function author()
+    {
         return $this->belongsTo(User::class, 'author_id', 'id');
     }
 
-    public function category(){
+    public function category()
+    {
         return $this->belongsTo(Category::class);
     }
 
-    public function comments(){
+    public function comments()
+    {
         return $this->hasMany(Comment::class)->with(['author']);
     }
 
-    public function images(){
+    public function images()
+    {
         return $this->hasMany(Image::class);
     }
 
-    public function videos(){
+    public function videos()
+    {
         return $this->hasMany(Video::class);
     }
 
-    public function tags(){
+    public function tags()
+    {
         return $this->belongsToMany(Tag::class);
     }
-
 }

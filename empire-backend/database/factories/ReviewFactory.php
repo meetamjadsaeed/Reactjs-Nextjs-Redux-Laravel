@@ -17,10 +17,10 @@ class ReviewFactory extends Factory
     {
         return [
             'review' => $this->faker->paragraph,
-        'rating' => $this->faker->numberBetween(0, 5),
-        'user_id' => function() {
-            return User::all()->random();
-        },
+            'rating' => $this->faker->numberBetween(0, 5),
+            'user_id' => function () {
+                return User::all()->random();
+            },
         ];
     }
 }

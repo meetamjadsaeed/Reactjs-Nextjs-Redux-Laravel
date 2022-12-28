@@ -19,16 +19,12 @@ import ListingsByCity from "../components/ListingsByCity";
 import AllCities from "../components/AllCities";
 
 export default function Home() {
-  
-  
-
   // useEffect(() => {
   //   // console.log("check location", geoplugin_regionName());
   //   displayLocation();
 
   //   console.log(getLocation);
-  // },[]);    
-
+  // },[]);
 
   return (
     <>
@@ -41,7 +37,11 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet"
         />
-        <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
+        <script
+          language="JavaScript"
+          src="http://www.geoplugin.net/javascript.gp"
+          type="text/javascript"
+        ></script>
       </Head>
 
       {/* Header */}
@@ -49,31 +49,27 @@ export default function Home() {
 
       <Search />
 
-      
-
       <div>
-            <h2 className="heading" style={{'textAlign':'center'}}>Welcome to the Empire Listings</h2>
-            
-            <section>
-                <h2 style={{'textAlign':'center'}}>Categories</h2>
-                <Categories />
+        <h2 className="heading" style={{ textAlign: "center" }}>
+          Welcome to the Empire Listings
+        </h2>
 
-                <h2 style={{'textAlign':'center'}}>Browse by Cities</h2>
-                <AllCities />
+        <section>
+          <h2 style={{ textAlign: "center" }}>Categories</h2>
+          <Categories />
 
-                <h2 style={{'textAlign':'center'}}>Based on your Current Location  </h2>
-                <ListingsByCity />
+          <h2 style={{ textAlign: "center" }}>Browse by Cities</h2>
+          <AllCities />
 
-                <h2 style={{'textAlign':'center'}}>All Listings</h2>
-                <Listings />
+          <h2 style={{ textAlign: "center" }}>
+            Based on your Current Location{" "}
+          </h2>
+          <ListingsByCity />
 
-
-
-            </section>
-        </div>
-
-      
-
+          <h2 style={{ textAlign: "center" }}>All Listings</h2>
+          <Listings />
+        </section>
+      </div>
 
       {/* </div> */}
 

@@ -142,7 +142,7 @@ export async function getServerSideProps(context) {
   // const slug  = router.query.post;
   const slug  = context.query.postsWithCity;
 
-  const res = await fetch(` http://127.0.0.1:8000/api/searchbycity/${slug}`, {
+  const res = await fetch(` ${process.env.NEXT_PUBLIC_BACKEND_API}searchbycity/${slug}`, {
     headers: {
       "Content-Type": "application/json",
       Authorization:

@@ -16,53 +16,42 @@ import Form from "react-bootstrap/Form";
 import Link from "next/link";
 import PackageForm from "../components/PackageForm";
 
-
 // import qs from 'qs';
-var qs = require('qs');
+var qs = require("qs");
 
 export default function Package() {
-  const [user, setUser] = useState()
-
+  const [user, setUser] = useState();
 
   useEffect(() => {
     // console.log("isAuthenticated" + user);
     const loggedInUser = localStorage.getItem("token");
-  // console.log(localStorage.getItem("token"));
-  
+    // console.log(localStorage.getItem("token"));
+
     if (loggedInUser) {
       const foundUser = JSON.parse(loggedInUser);
       // console.log(foundUser);
       setUser(foundUser);
-    }
-    else {
+    } else {
       console.log("User Not Found");
     }
   }, []);
-  
-  
+
   return (
     <>
-      <Head>
-        
-      </Head>
+      <Head></Head>
 
       {/* Header */}
       <MainNav />
 
       {/* <div>Post new Ad</div> */}
 
-      {
-        
-        user ?
-        (<PackageForm user={user} />)  :
-       (
+      {user ? (
+        <PackageForm user={user} />
+      ) : (
         <Link href={"../login"}>
-       <button className="btn">Please Login First</button>
-       </Link>
-       )
-       
-       }
-      
+          <button className="btn">Please Login First</button>
+        </Link>
+      )}
 
       {/* Footer */}
       <Footer />

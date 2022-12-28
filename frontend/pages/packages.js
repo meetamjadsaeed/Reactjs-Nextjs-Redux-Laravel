@@ -19,26 +19,23 @@ import { useRouter } from "next/router";
 // import { Linkk } from "react-router-dom";
 
 export default function Packages() {
+  // const handleClick = (event, param) => {
 
-// const handleClick = (event, param) => {
+  // };
 
+  const router = useRouter();
 
-
-// };
-
-const router = useRouter();
-
-const handleClick = (e) => {
-  e.preventDefault()
-  router.push("/checkout")
-}
+  const handleClick = (e) => {
+    e.preventDefault();
+    router.push("/checkout");
+  };
 
   const [packages, setPackages] = useState();
 
   const getData = async () => {
     // Get Posts
     await axios
-      .get("  http://127.0.0.1:8000/api/products  ", {
+      .get(`${process.env.NEXT_PUBLIC_BACKEND_API}products`, {
         headers: {
           "Content-Type": "application/json",
           Authorization:
@@ -62,65 +59,60 @@ const handleClick = (e) => {
 
       {/* <div>Packages</div> */}
 
-      
       <div class="background">
-  <div class="container">
-    <div class="panel pricing-table">
-      <Row>
-     
-    { packages ? 
-  packages.map((item)=>{
-    return (
+        <div class="container">
+          <div class="panel pricing-table">
+            <Row>
+              {packages ? (
+                packages.map((item) => {
+                  return (
+                    <Col lg={4}>
+                      <div class="pricing-plan">
+                        <img
+                          src="https://s22.postimg.cc/8mv5gn7w1/paper-plane.png"
+                          alt=""
+                          class="pricing-img"
+                        />
+                        <h2 class="pricing-header">{item.name}</h2>
+                        <ul class="pricing-features">
+                          <li class="pricing-features-item">Custom domains</li>
+                          <li class="pricing-features-item">
+                            Sleeps after 30 mins of inactivity
+                          </li>
+                        </ul>
+                        <span class="pricing-price">Free</span>
+                        {/* <a href="#/" class="pricing-button">Sign up</a> */}
 
+                        <Link
+                          href={`http://localhost:3000/packages/${item.id}`}
+                        >
+                          <Button variant="primary" className="pricing-button">
+                            {" "}
+                            Veiw{" "}
+                          </Button>
+                        </Link>
+                        <br />
 
-
-        <Col lg={4}>
-
-        <div class="pricing-plan">
-        <img src="https://s22.postimg.cc/8mv5gn7w1/paper-plane.png" alt="" class="pricing-img" />
-        <h2 class="pricing-header">{item.name}</h2>
-        <ul class="pricing-features">
-          <li class="pricing-features-item">Custom domains</li>
-          <li class="pricing-features-item">Sleeps after 30 mins of inactivity</li>
-        </ul>
-        <span class="pricing-price">Free</span>
-        {/* <a href="#/" class="pricing-button">Sign up</a> */}
-        
-                  <Link href={`http://localhost:3000/packages/${item.id}`}>
-                  <Button variant="primary" className="pricing-button"> Veiw </Button> 
-                  </Link>
-                <br />
-
-                  <Link href={`http://localhost:3000/checkout/${item.id}`}>
-                  <Button variant="primary" className="pricing-button" > Buy </Button>
-                  {/* <Button variant="primary" className="pricing-button"> Buy </Button>  */}
-                  </Link>
-
-                  
-
-                  
+                        <Link
+                          href={`http://localhost:3000/checkout/${item.id}`}
+                        >
+                          <Button variant="primary" className="pricing-button">
+                            {" "}
+                            Buy{" "}
+                          </Button>
+                          {/* <Button variant="primary" className="pricing-button"> Buy </Button>  */}
+                        </Link>
+                      </div>
+                    </Col>
+                  );
+                })
+              ) : (
+                <p>loading...</p>
+              )}
+            </Row>
+          </div>
+        </div>
       </div>
-      
-        </Col>
-
-
-)
-}) : <p>loading...</p>
-}
-
-
-     
-</Row>
-      
-     
-      
-    
-      
-    </div>
-  </div>
-</div>
-
-
 
       {/* Footer */}
       <Footer />

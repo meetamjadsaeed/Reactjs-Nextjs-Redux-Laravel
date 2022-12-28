@@ -16,7 +16,6 @@
 // export const { setUser, getUser } = profileSlice.actions;
 // export default profileSlice.reducer;
 
-
 // import { createSlice } from '@reduxjs/toolkit'
 //     const foundUser = "User Not Found";
 
@@ -36,7 +35,7 @@
 //     //   state.value += 1
 
 //     const loggedInUser = localStorage.getItem("token");
-  
+
 //       if (loggedInUser) {
 //         state.value = JSON.parse(loggedInUser);
 //       }
@@ -56,56 +55,51 @@
 
 // export default profileSlice.reducer
 
-
-const { createSlice, createAsyncThunk } = require('@reduxjs/toolkit');
+const { createSlice, createAsyncThunk } = require("@reduxjs/toolkit");
 
 export const STATUSES = Object.freeze({
-    IDLE: 'idle',
-    ERROR: 'error',
-    LOADING: 'loading',
+  IDLE: "idle",
+  ERROR: "error",
+  LOADING: "loading",
 });
 
 const profileSlice = createSlice({
-    name: 'profile',
-    initialState: {
-        data: [],
-        status: STATUSES.IDLE,
-    },
-    reducers: {
-        // setProducts(state, action) {
-        //     state.data = action.payload;
-        // },
-        // setStatus(state, action) {
-        //     state.status = action.payload;
-        // },
-    },
-    extraReducers: (builder) => {
-        builder
-            .addCase(getUser.pending, (state, action) => {
-                state.status = STATUSES.LOADING;
-            })
-            .addCase(getUser.fulfilled, (state, action) => {
-                state.data = action.payload;
-                state.status = STATUSES.IDLE;
-            })
-            .addCase(getUser.rejected, (state, action) => {
-                state.status = STATUSES.ERROR;
-            });
-    },
+  name: "profile",
+  initialState: {
+    data: [],
+    status: STATUSES.IDLE,
+  },
+  reducers: {
+    // setProducts(state, action) {
+    //     state.data = action.payload;
+    // },
+    // setStatus(state, action) {
+    //     state.status = action.payload;
+    // },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(getUser.pending, (state, action) => {
+        state.status = STATUSES.LOADING;
+      })
+      .addCase(getUser.fulfilled, (state, action) => {
+        state.data = action.payload;
+        state.status = STATUSES.IDLE;
+      })
+      .addCase(getUser.rejected, (state, action) => {
+        state.status = STATUSES.ERROR;
+      });
+  },
 });
 
 // export const { setProducts, setStatus } = productSlice.actions;
 export default profileSlice.reducer;
 
 // Thunks
-export const getUser = createAsyncThunk('categoires/fetch', async () => {
-  
+export const getUser = createAsyncThunk("categoires/fetch", async () => {
   const loggedInUser = localStorage.getItem("token");
-  
-  
-    const data = JSON.parse(loggedInUser);
-  
-  
-    return data;
-});
 
+  const data = JSON.parse(loggedInUser);
+
+  return data;
+});
