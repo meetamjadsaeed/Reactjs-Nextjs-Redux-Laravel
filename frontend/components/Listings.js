@@ -13,6 +13,7 @@ const Listings = () => {
     city: "",
     currencySymbol: "",
   });
+  
   //get user token
   const token = user ? user.data.token : "not found";
 

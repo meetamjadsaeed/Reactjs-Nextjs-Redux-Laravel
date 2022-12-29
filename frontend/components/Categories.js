@@ -10,6 +10,7 @@ import { STATUSES } from "../store//categoriesSlice.js";
 
 const Categories = () => {
   const [listings, setListings] = useState();
+  const [user, setUser] = useState();
   // console.log(listings);
   const dispatch = useDispatch();
   const { data, status } = useSelector((state) => state.category);
@@ -32,6 +33,20 @@ const Categories = () => {
 
   useEffect(() => {
     getData();
+    console.log("check url", process.env.DB_HOST);
+    // check user login
+    // console.log("isAuthenticated" + user);
+    const loggedInUser = localStorage.getItem("token");
+    // console.log(localStorage.getItem("token"));
+
+    if (loggedInUser) {
+      const foundUser = JSON.parse(loggedInUser);
+      // console.log(foundUser);
+      setUser(foundUser);
+    } else {
+      console.log("User Not Found");
+    }
+
   }, []);
 
   return (
