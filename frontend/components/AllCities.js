@@ -76,7 +76,7 @@ const allCities = () => {
         {listings ? (
           listings.map((item) => {
             return (
-              <Link href={`http://localhost:3000/postswithcity/${item.city}`}>
+              <Link href={`postswithcity/${item.city}`}>
                 <div className="card">
                   <img
                     src="https://newevolutiondesigns.com/images/freebies/city-wallpaper-5.jpg"

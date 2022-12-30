@@ -50,7 +50,7 @@ const Cities = () => {
             listings.map((item) => {
               return (
                 <Link
-                  href={`http://localhost:3000/postswithcat/${item.category_id}`}
+                  href={`postswithcat/${item.category_id}`}
                 >
                   <div
                     className="card"

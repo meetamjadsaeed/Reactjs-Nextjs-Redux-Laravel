@@ -34,7 +34,7 @@ const Tags = () => {
         {Tags ? (
           Tags.map((item) => {
             return (
-              <Link href={`http://localhost:3000/postswithtag/${item.tag_id}`}>
+              <Link href={`postswithtag/${item.tag_id}`}>
                 <div className="card" style={{ minHeight: "200PX" }}>
                   <h4>{item.title}</h4>
                 </div>
