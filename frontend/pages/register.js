@@ -41,7 +41,7 @@ export default function Register() {
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         console.log("You are Successfully registered");
-        console.log(res);
+        // console.log(res);
         // navigate("http://localhost:3000/");
       })
       .catch((err) => console.error(err));
