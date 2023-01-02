@@ -1,22 +1,12 @@
-import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import { useState } from "react";
-import { useEffect } from "react";
 import axios from "axios";
-import Accordion from "react-bootstrap/Accordion";
-import Head from "next/head";
 import MainNav from "../components/MainNav";
 import Form from "react-bootstrap/Form";
-import Link from "next/link";
 
 export default function Register() {
-  // const [registerDetails, setRegister] = useState()
 
   const [registerDetails, setRegister] = useState({
     first_name: "",
@@ -41,7 +31,6 @@ export default function Register() {
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         console.log("You are Successfully registered");
-        // console.log(res);
         // navigate("http://localhost:3000/");
       })
       .catch((err) => console.error(err));
@@ -50,7 +39,6 @@ export default function Register() {
   return (
     <>
       <Container>
-        {/* Header */}
         <MainNav />
 
         <Form onSubmit={handleSubmit}>
@@ -116,7 +104,6 @@ export default function Register() {
           </Button>
         </Form>
 
-        {/* Footer */}
         <Footer />
       </Container>
     </>
