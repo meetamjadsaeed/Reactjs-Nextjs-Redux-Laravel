@@ -10,14 +10,8 @@ import Head from "next/head";
 import MainNav from "../components/MainNav";
 import Link from "next/link";
 import { useRouter } from "next/router";
-// const router = useRouter();
-// import { Linkk } from "react-router-dom";
 
 export default function Packages() {
-  // const handleClick = (event, param) => {
-
-  // };
-
   const router = useRouter();
 
   const handleClick = (e) => {
@@ -28,7 +22,6 @@ export default function Packages() {
   const [packages, setPackages] = useState();
 
   const getData = async () => {
-    // Get Posts
     await axios
       .get(`${process.env.NEXT_PUBLIC_BACKEND_API}products`, {
         headers: {
@@ -38,7 +31,6 @@ export default function Packages() {
         },
       })
       .then((result) => setPackages(result.data.products.data));
-    //   .then((result) => console.log(result));
   };
 
   useEffect(() => {
@@ -49,10 +41,7 @@ export default function Packages() {
     <>
       <Head></Head>
 
-      {/* Header */}
       <MainNav />
-
-      {/* <div>Packages</div> */}
 
       <div class="background">
         <div class="container">
@@ -76,7 +65,6 @@ export default function Packages() {
                           </li>
                         </ul>
                         <span class="pricing-price">Free</span>
-                        {/* <a href="#/" class="pricing-button">Sign up</a> */}
 
                         <Link
                           href={`http://localhost:3000/packages/${item.id}`}
@@ -95,7 +83,6 @@ export default function Packages() {
                             {" "}
                             Buy{" "}
                           </Button>
-                          {/* <Button variant="primary" className="pricing-button"> Buy </Button>  */}
                         </Link>
                       </div>
                     </Col>
@@ -109,7 +96,6 @@ export default function Packages() {
         </div>
       </div>
 
-      {/* Footer */}
       <Footer />
     </>
   );
