@@ -1,4 +1,3 @@
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Button from "react-bootstrap/Button";
 import Row from "react-bootstrap/Row";
@@ -13,11 +12,6 @@ import { useRouter } from "next/router";
 
 export default function Packages() {
   const router = useRouter();
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    router.push("/checkout");
-  };
 
   const [packages, setPackages] = useState();
 

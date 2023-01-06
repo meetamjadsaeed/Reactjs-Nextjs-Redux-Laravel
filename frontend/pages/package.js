@@ -6,7 +6,6 @@ import MainNav from "../components/MainNav";
 import Link from "next/link";
 import PackageForm from "../components/PackageForm";
 
-// import qs from 'qs';
 var qs = require("qs");
 
 export default function Package() {
