@@ -1,20 +1,4 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import Carousel from "react-bootstrap/Carousel";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import { useState } from "react";
-import { useEffect } from "react";
-import axios from "axios";
-import Accordion from "react-bootstrap/Accordion";
 import Head from "next/head";
-import MainNav from "../components/MainNav";
-import Form from "react-bootstrap/Form";
-import Link from "next/link";
-// import Head from 'next/head';
 
 export default function Dashboard() {
   jQuery(function ($) {
@@ -63,7 +47,6 @@ export default function Dashboard() {
             This page demo the Bootstrap 4 responsive dahboard sidebar menu.
           </p>
 
-          {/* <!-- Sidebar Menu HTML --> */}
           <div class="page-wrapper chiller-theme toggled">
             <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
               <i class="fas fa-bars"></i>
@@ -96,7 +79,6 @@ export default function Dashboard() {
                     </span>
                   </div>
                 </div>
-                {/* <!-- sidebar-header  --> */}
                 <div class="sidebar-search">
                   <div>
                     <div class="input-group">
@@ -113,7 +95,6 @@ export default function Dashboard() {
                     </div>
                   </div>
                 </div>
-                {/* <!-- sidebar-search  -->  */}
                 <div class="sidebar-menu">
                   <ul>
                     <li class="header-menu">
@@ -251,9 +232,7 @@ export default function Dashboard() {
                     </li>
                   </ul>
                 </div>
-                {/* <!-- sidebar-menu  --> */}
               </div>
-              {/* <!-- sidebar-content  --> */}
               <div class="sidebar-footer">
                 <a href="#">
                   <i class="fa fa-bell"></i>
@@ -277,7 +256,6 @@ export default function Dashboard() {
               </div>
             </nav>
           </div>
-          {/* <!-- sidebar-wrapper  --> */}
           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
           <script
             src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
@@ -289,8 +267,6 @@ export default function Dashboard() {
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"
           ></script>
-
-          {/* <!-- End Sidebar Menu HTML --> */}
         </article>
       </main>
     </>
