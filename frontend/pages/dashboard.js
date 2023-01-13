@@ -25,16 +25,13 @@ export default function Dashboard() {
   return (
     <>
       <Head>
-        {/* <!-- Bootstrap 4 CSS and JavaScript --> */}
         <link
           href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           rel="stylesheet"
           id="bootstrap-css"
         />
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-        {/* <!-- jQuery JS --> */}
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        {/* <!-- Font Awesome 5 CSS --> */}
         <link
           href="https://use.fontawesome.com/releases/v5.0.6/css/all.css"
           rel="stylesheet"
