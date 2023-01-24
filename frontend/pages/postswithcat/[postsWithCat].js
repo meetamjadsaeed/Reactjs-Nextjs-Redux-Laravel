@@ -18,7 +18,7 @@ export default function postsWithCat(props) {
   const [postsWithCat, setpostsWithCat] = useState(props.data.data);
 
   // const router = useRouter();
-  
+
   //       const slug  = router.query.post;
 
   // const getData = async () => {
@@ -50,83 +50,83 @@ export default function postsWithCat(props) {
   //   // getData();
   //   console.log("cehck cat", postsWithCat);
   // }, []);
- 
+
   return (
     <>
- <Head>
-        
-        </Head>
-  
-        {/* Header */}
-        <MainNav />
+      <Head>
+
+      </Head>
+
+      {/* Header */}
+      <MainNav />
 
       {/* <div>VeiwPost {id}</div> */}
       {/* <p>{post.post_title}</p> */}
 
-<h1>Posts related to this Category are</h1>
+      <h1>Posts related to this Category are</h1>
 
-<div className="container">
-   
-   <Row>
-  
- { postsWithCat ? 
-postsWithCat.map((item)=>{
- return (
+      <div className="container">
 
+        <Row>
 
-
-     <Col lg={4}>
-
-    <div class="card">
-   <ul>
-     <li>
-       <i class="fa-solid fa-mug-hot"></i>
-     </li>
-     <li>
-       <i class="fa-solid fa-film"></i>
-     </li>
-     <li>
-       <i class="fa-solid fa-store-alt"></i>
-     </li>
-     <li>
-       <i class="fa-solid fa-map"></i>
-     </li>
-   </ul>
-   <img
-     src="https://c4.wallpaperflare.com/wallpaper/471/337/300/red-hair-girl-freckles-glasses-library-reading-book-wallpaper-preview.jpg"
-     alt=""
-   />
-   <div class="content">
-     <h3 style={{"color": "white !important"}}>{item && item.post_title}</h3>
-     <p style={{"color": "white !important"}}>
-       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
-       labore laborum necessitatibus quis, earum, repellat facilis adipisci,
-       dolores corporis ipsam ratione eaque vitae quia sunt nemo et
-       repudiandae porro incidunt.
-       <button>See more...</button>
-     </p>
-   </div>
- </div>
-   
-     </Col>
+          {postsWithCat ?
+            postsWithCat.map((item) => {
+              return (
 
 
-)
-}) : <p>loading...</p>
-}
+
+                <Col lg={4}>
+
+                  <div class="card">
+                    <ul>
+                      <li>
+                        <i class="fa-solid fa-mug-hot"></i>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-film"></i>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-store-alt"></i>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-map"></i>
+                      </li>
+                    </ul>
+                    <img
+                      src="https://c4.wallpaperflare.com/wallpaper/471/337/300/red-hair-girl-freckles-glasses-library-reading-book-wallpaper-preview.jpg"
+                      alt=""
+                    />
+                    <div class="content">
+                      <h3 style={{ "color": "white !important" }}>{item && item.post_title}</h3>
+                      <p style={{ "color": "white !important" }}>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus
+                        labore laborum necessitatibus quis, earum, repellat facilis adipisci,
+                        dolores corporis ipsam ratione eaque vitae quia sunt nemo et
+                        repudiandae porro incidunt.
+                        <button>See more...</button>
+                      </p>
+                    </div>
+                  </div>
+
+                </Col>
 
 
-  
-</Row>
-   
-  
-   
- 
-   
+              )
+            }) : <p>loading...</p>
+          }
 
-</div>
 
-      
+
+        </Row>
+
+
+
+
+
+
+      </div>
+
+
       {/* Footer */}
       <Footer />
 
@@ -135,11 +135,8 @@ postsWithCat.map((item)=>{
   );
 }
 export async function getServerSideProps(context) {
-  // console.log(context);
-  // const router = useRouter();
-  
-  // const slug  = router.query.post;
-  const slug  = context.query.postsWithCat;
+
+  const slug = context.query.postsWithCat;
 
   const res = await fetch(` ${process.env.NEXT_PUBLIC_BACKEND_API}categories/${slug}/posts`, {
     headers: {
@@ -151,5 +148,5 @@ export async function getServerSideProps(context) {
   const data = await res.json()
   return {
     props: { data }, // will be passed to the page component as props
-}
+  }
 }
