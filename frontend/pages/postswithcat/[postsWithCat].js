@@ -127,7 +127,6 @@ export default function postsWithCat(props) {
       </div>
 
 
-      {/* Footer */}
       <Footer />
 
 
@@ -147,6 +146,6 @@ export async function getServerSideProps(context) {
   })
   const data = await res.json()
   return {
-    props: { data }, // will be passed to the page component as props
+    props: { data },
   }
 }
