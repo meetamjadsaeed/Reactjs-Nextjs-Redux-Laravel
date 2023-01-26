@@ -57,11 +57,7 @@ export default function postsWithCat(props) {
 
       </Head>
 
-      {/* Header */}
       <MainNav />
-
-      {/* <div>VeiwPost {id}</div> */}
-      {/* <p>{post.post_title}</p> */}
 
       <h1>Posts related to this Category are</h1>
 
