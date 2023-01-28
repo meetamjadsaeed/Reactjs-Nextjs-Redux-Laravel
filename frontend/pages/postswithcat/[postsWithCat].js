@@ -12,8 +12,6 @@ import Col from "react-bootstrap/Col";
 
 export default function postsWithCat(props) {
   // console.log(props);
-  //   // const router = useRouter()
-  // // const id  = router.query.post;
 
   const [postsWithCat, setpostsWithCat] = useState(props.data.data);
 
