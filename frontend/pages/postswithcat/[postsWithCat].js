@@ -11,8 +11,6 @@ import Col from "react-bootstrap/Col";
 
 
 export default function postsWithCat(props) {
-  // console.log(props);
-
   const [postsWithCat, setpostsWithCat] = useState(props.data.data);
 
 
