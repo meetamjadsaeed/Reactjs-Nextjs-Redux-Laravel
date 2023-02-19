@@ -195,7 +195,6 @@ export default function Post(props) {
   );
 }
 export async function getServerSideProps(context) {
-  // console.log(context);
   const slug = context.query.post;
 
   const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API}posts/${slug}`, {
