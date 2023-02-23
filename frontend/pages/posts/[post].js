@@ -183,11 +183,6 @@ export default function Post(props) {
           </div>
         </div>
       </div>
-
-
-
-
-      {/* Footer */}
       <Footer />
 
 
