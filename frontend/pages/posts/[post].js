@@ -155,7 +155,6 @@ export default function Post(props) {
                                   </div>
                                   <div class="d-flex justify-content-between align-items-center">
                                     <p class="small mb-0" styles={{ 'color': '#aaa' }}>
-                                      {/* <a href="#!" class="link-grey">Remove</a> • */}
                                       <a href="#!" class="link-grey">Reply</a> •
                                       <a href="#!" class="link-grey">Translate</a>
                                     </p>
