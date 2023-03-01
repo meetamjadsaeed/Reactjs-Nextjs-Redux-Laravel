@@ -124,15 +124,6 @@ export default function Post(props) {
                   <div class="col-md-12 col-lg-10 col-xl-8">
                     <div class="d-flex justify-content-between align-items-center mb-4">
                       {/* <h4 class="text-dark mb-0">Unread comments (4)</h4> */}
-                      {/* <div class="card">
-            <div class="card-body p-2 d-flex align-items-center">
-              <h6 class="text-primary fw-bold small mb-0 me-1">Comments "ON"</h6>
-              <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked />
-                <label class="form-check-label" for="flexSwitchCheckChecked"></label>
-              </div>
-            </div>
-          </div> */}
                     </div>
 
                     {comments ?
