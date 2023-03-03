@@ -7,10 +7,6 @@ import Footer from '../../components/Footer';
 
 
 export default function Post(props) {
-  // console.log(props);
-  //   // const router = useRouter()
-  // // const id  = router.query.post;
-
   const [post, setpost] = useState(props.data.data);
 
   const [comments, setComments] = useState();
