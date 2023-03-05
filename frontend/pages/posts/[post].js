@@ -11,7 +11,6 @@ export default function Post(props) {
   const [comments, setComments] = useState();
 
   const getData = async () => {
-    // Get Posts
     await axios
       .get(`${process.env.NEXT_PUBLIC_BACKEND_API}posts/${post.post_id}/comments`, {
         headers: {
