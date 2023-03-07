@@ -20,7 +20,6 @@ export default function Post(props) {
         },
       })
       .then((result) => setComments(result.data.data));
-    // .then((result) => console.log(result.));
   };
 
   useEffect(() => {
