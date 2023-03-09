@@ -28,8 +28,6 @@ export default function Post(props) {
 
 
 
-  // const router = useRouter();
-
   //       const slug  = router.query.post;
 
   // const getData = async () => {
